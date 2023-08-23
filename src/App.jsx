@@ -29,7 +29,7 @@ function App() {
         token,
         user: {
           id: userRes.data.data?.user_id,
-          display_name: userRes.data.data.first_name,
+          display_name: userRes.data.data?.first_name,
         },
       });
     }
