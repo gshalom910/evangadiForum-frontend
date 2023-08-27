@@ -20,6 +20,9 @@ input {
   padding-left: 10px;
   font-size: 17px;
 }
+.in1 span {
+  object-fit: contain;
+}
 form {
   text-align: center;
 }
