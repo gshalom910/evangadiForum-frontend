@@ -12,7 +12,7 @@ function QuestionDetail() {
   const questionByPostId = async () => {
     try {
       const question = await axios.get(
-        `${process.env.REACT_APP_base_url}/api/questions/${params.id}`
+        `https://evangadiforum-1qga.onrender.com/api/questions/${params.id}`
       );
       setQuestion(question.data.data);
     } catch (err) {

@@ -12,7 +12,7 @@ function Home() {
   const Questions = async () => {
     try {
       const questionRes = await axios.get(
-        `http://localhost:4500/api/questions`
+        `https://evangadiforum-1qga.onrender.com/api/questions`
       );
       setAllQuestions(questionRes.data.data);
     } catch (err) {
