@@ -24,8 +24,11 @@ function Home() {
     }
   };
   useEffect(() => {
-    if (!userData.user) navigate("/login");
-    Questions();
+    if (!userData.user) {
+      navigate("/login");
+    } else {
+      Questions();
+    }
   }, [userData.user, navigate]);
   const handleClick = (e) => {
     e.preventDefault();
