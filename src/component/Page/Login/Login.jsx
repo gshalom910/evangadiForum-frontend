@@ -18,13 +18,20 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const loginRes = await axios.post(
-        `https://evangadiforum-1qga.onrender.com/api/users/login`,
-        {
-          email: form.email,
-          password: form.password,
-        }
-      );
+      const loginRes = await axios
+        .post(
+          `https://evangadiforum-1qga.onrender.com/api/users/login`,
+          {
+            email: form.email,
+            password: form.password,
+          },
+          {
+            headers: { "Content-Type": "application/json" },
+          }
+        )
+        .then(function (response) {
+          console.log(response);
+        });
       setUserData({
         token: loginRes.data.token,
         user: loginRes.data.user,
