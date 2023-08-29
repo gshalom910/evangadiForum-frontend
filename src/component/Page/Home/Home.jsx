@@ -11,9 +11,13 @@ function Home() {
   const navigate = useNavigate();
   const Questions = async () => {
     try {
-      const questionRes = await axios.get(
-        `https://evangadiforum-1qga.onrender.com/api/questions`
-      );
+      const questionRes = await axios
+        .get(`https://evangadiforum-1qga.onrender.com/api/questions`, {
+          headers: { "Content-Type": "application/json" },
+        })
+        .then(function (response) {
+          console.log(response);
+        });
       setAllQuestions(questionRes.data.data);
     } catch (err) {
       console.log("problem", err);
