@@ -82,7 +82,7 @@ form {
 .showHide {
   display: flex;
   justify-content: flex-end;
-  margin: -52px 45px 0px 455px;
+  /* margin: -52px 45px 0px 455px; */
   opacity: 0.65;
   cursor: pointer;
 }
