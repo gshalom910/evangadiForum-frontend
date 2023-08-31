@@ -12,7 +12,7 @@ function Home() {
   const Questions = async () => {
     try {
       const questionRes = await axios
-        .get(`https://evangadiforum-1qga.onrender.com/api/questions`, {
+        .get(`https://evangadiforumbackend.onrender.com/api/questions`, {
           headers: { "Content-Type": "application/json" },
         })
         .then(function (response) {
