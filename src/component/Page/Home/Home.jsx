@@ -12,9 +12,7 @@ function Home() {
   const Questions = async () => {
     try {
       const questionRes = await axios
-        .get(`https://evangadiforumbackend.onrender.com/api/questions`, {
-          headers: { "Content-Type": "application/json" },
-        })
+        .get(`https://evangadiforumbackend.onrender.com/api/questions`)
         .then(function (response) {
           setAllQuestions(response.data.data);
           console.log(response);
