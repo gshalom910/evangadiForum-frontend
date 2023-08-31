@@ -13,7 +13,7 @@ function AnswerQuestion({ questionId }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`${process.env.REACT_APP_base_url}/api/answer`, {
+      await axios.post(`https://evangadiforumbackend.onrender.com/api/answer`, {
         id: userData.user.id,
         questionId: questionId,
         answer: form.answer,
