@@ -35,7 +35,7 @@ function Login() {
       navigate("/");
     } catch (err) {
       console.log("problem", err);
-      alert(err.data.msg);
+      alert(err.response.data.msg);
     }
   };
   useEffect(() => {

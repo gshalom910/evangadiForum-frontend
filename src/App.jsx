@@ -19,7 +19,7 @@ function App() {
       token = "";
     } else {
       const userRes = await axios.get(
-        `${process.env.REACT_APP_base_url}/api/users`,
+        `https://evangadiforumbackend.onrender.com/api/users`,
         {
           headers: { "x-auth-token": token },
         }
@@ -29,7 +29,7 @@ function App() {
         token,
         user: {
           id: userRes.data.data?.user_id,
-          display_name: userRes.data.data?.first_name,
+          display_name: userRes.data.data?.user_name,
         },
       });
     }
