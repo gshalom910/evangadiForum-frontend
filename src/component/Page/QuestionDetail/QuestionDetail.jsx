@@ -44,7 +44,7 @@ function QuestionDetail() {
       <div>{answers.length > 0 && <h3>Answer From The Community</h3>}</div>
       {answers.map((answer) => (
         <div key={answer.answer_id}>
-          <Answer answer={answer.answer} userName={answer.user_name} />
+          <Answer answer={answer.answer} userName={answer?.user_name} />
         </div>
       ))}
 
