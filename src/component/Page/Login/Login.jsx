@@ -25,11 +25,11 @@ function Login() {
         })
         .then(function (response) {
           console.log(response);
+          setUserData({
+            token: response.data.token,
+            user: response.data.user,
+          });
         });
-      setUserData({
-        token: loginRes.data.token,
-        user: loginRes.data.user,
-      });
 
       localStorage.setItem("auth-token", loginRes.data.token);
       navigate("/");
