@@ -15,7 +15,7 @@ function Home() {
         .get(`https://evangadiforumbackend.onrender.com/api/questions`)
         .then(function (response) {
           setAllQuestions(response.data.data);
-          console.log(response);
+          // console.log(response);
         });
     } catch (err) {
       console.log("problem", err);
