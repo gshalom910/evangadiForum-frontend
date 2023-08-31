@@ -16,9 +16,9 @@ function Home() {
           headers: { "Content-Type": "application/json" },
         })
         .then(function (response) {
+          setAllQuestions(response.data.data);
           console.log(response);
         });
-      setAllQuestions(questionRes.data.data);
     } catch (err) {
       console.log("problem", err);
     }
