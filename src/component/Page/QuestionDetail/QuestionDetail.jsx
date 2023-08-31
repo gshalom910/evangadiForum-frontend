@@ -22,7 +22,7 @@ function QuestionDetail() {
   const answersByQuestionId = async () => {
     try {
       const answersRes = await axios.get(
-        `${process.env.REACT_APP_base_url}/api/answer/${question?.question_id}`
+        `https://evangadiforumbackend.onrender.com/api/answer/${question?.question_id}`
       );
       setAnswers(answersRes.data.data);
     } catch (err) {
