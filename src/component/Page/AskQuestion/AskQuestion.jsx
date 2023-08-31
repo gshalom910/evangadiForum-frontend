@@ -14,11 +14,14 @@ function AskQuestion() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`${process.env.REACT_APP_base_url}api/questions`, {
-        id: userData.user.id,
-        question: form.question,
-        questionDescription: form.questionDescription,
-      });
+      await axios.post(
+        `https://evangadiforumbackend.onrender.com/api/questions`,
+        {
+          id: userData.user.id,
+          question: form.question,
+          questionDescription: form.questionDescription,
+        }
+      );
       navigate("/");
     } catch (err) {
       console.log("problem", err);
