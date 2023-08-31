@@ -40,9 +40,7 @@ function Home() {
         <button className="ask_button" onClick={handleClick}>
           Ask Question
         </button>
-        <h4>
-          Welcome: {userData.user?.display_name} {userData.user?.display_Lname}
-        </h4>
+        <h4>Welcome: {userData.user?.display_name}</h4>
       </div>
       <h3>Questions</h3>
       <div>
