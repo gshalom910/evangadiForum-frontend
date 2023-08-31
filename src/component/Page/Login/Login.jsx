@@ -24,7 +24,7 @@ function Login() {
           password: form.password,
         })
         .then(function (response) {
-          console.log(response);
+          // console.log(response);
           setUserData({
             token: response.data.token,
             user: response.data.user,
