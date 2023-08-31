@@ -19,16 +19,10 @@ function Login() {
     e.preventDefault();
     try {
       const loginRes = await axios
-        .post(
-          `https://evangadiforumbackend.onrender.com/api/users/login`,
-          {
-            email: form.email,
-            password: form.password,
-          },
-          {
-            headers: { "Content-Type": "application/json" },
-          }
-        )
+        .post(`https://evangadiforumbackend.onrender.com/api/users/login`, {
+          email: form.email,
+          password: form.password,
+        })
         .then(function (response) {
           console.log(response);
         });
