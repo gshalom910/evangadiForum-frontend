@@ -20,7 +20,7 @@ function AnswerQuestion({ questionId }) {
         answer: form.answer,
       });
       // window.location.reload(false);
-      navigate("/");
+      // navigate("/");
     } catch (err) {
       console.log("problem", err);
     }
