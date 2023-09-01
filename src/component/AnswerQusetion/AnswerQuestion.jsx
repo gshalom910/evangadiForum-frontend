@@ -2,11 +2,12 @@ import { useContext, useState } from "react";
 import "./answerQuestion.css";
 import { UserContext } from "../Context/UserContext";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 function AnswerQuestion({ questionId }) {
   const [userData, setUserData] = useContext(UserContext);
   const [form, setForm] = useState({});
+  const navigate = useNavigate();
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -19,6 +20,7 @@ function AnswerQuestion({ questionId }) {
         answer: form.answer,
       });
       window.location.reload(false);
+      navigate("/");
     } catch (err) {
       console.log("problem", err);
     }
