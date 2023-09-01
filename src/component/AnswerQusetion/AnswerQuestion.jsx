@@ -19,7 +19,7 @@ function AnswerQuestion({ questionId }) {
         questionId: questionId,
         answer: form.answer,
       });
-      window.location.reload(false);
+      // window.location.reload(false);
       navigate("/");
     } catch (err) {
       console.log("problem", err);
