@@ -21,10 +21,14 @@ function QuestionDetail() {
   };
   const answersByQuestionId = async () => {
     try {
-      const answersRes = await axios.get(
-        `https://evangadiforumbackend.onrender.com/api/answer/${question?.question_id}`
-      );
-      setAnswers(answersRes.data.data);
+      const answersRes = await axios
+        .get(
+          `https://evangadiforumbackend.onrender.com/api/answer/${question?.question_id}`
+        )
+        .then(function (response) {
+          setAnswers(response.data.data);
+          // console.log(response);
+        });
     } catch (err) {
       console.log("problem", err);
     }
@@ -44,7 +48,7 @@ function QuestionDetail() {
       <div>{answers.length > 0 && <h3>Answer From The Community</h3>}</div>
       {answers.map((answer) => (
         <div key={answer.answer_id}>
-          <Answer answer={answer.answer} userName={answer?.user_name} />
+          <Answer answer={answer.answer} userName={answer.user_name} />
         </div>
       ))}
 
